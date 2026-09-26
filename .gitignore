@@ -1,0 +1,14 @@
+# 构建产物
+classes/
+build/
+*.apk
+!release/*.apk
+
+# 签名文件不入库（build.ps1 首次运行会自动生成）
+*.keystore
+*.jks
+
+# IDE / 系统
+.idea/
+.vscode/
+Thumbs.db
