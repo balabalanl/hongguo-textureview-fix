@@ -1,14 +1,22 @@
-# 构建产物
-classes/
+# Gradle / 构建产物
+.gradle/
 build/
-*.apk
-!release/*.apk
+.kotlin/
 
-# 签名文件不入库（build.ps1 首次运行会自动生成）
+# 本地 SDK 路径（含本机绝对路径，不入库）
+local.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# 系统
+Thumbs.db
+
+# 密钥（如后续自行签名，请勿入库）
 *.keystore
 *.jks
 
-# IDE / 系统
-.idea/
-.vscode/
-Thumbs.db
+# release 目录下的 APK 需要入库（供用户直接下载）
+!release/*.apk
